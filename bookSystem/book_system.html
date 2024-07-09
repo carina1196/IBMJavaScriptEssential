@@ -1,25 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Management System</title>
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <h1>Book Management System</h1>
-    <label for="bookName">Book Name:</label><br>
-    <input type="text" id="bookName"><br><br>
-    <label for="authorName">Author Name:</label><br>
-    <textarea id="authorName" rows="4"></textarea><br><br>
-    <label for="bookDescription">Book Description</label><br>
-    <textarea id="bookDescription" rows="4"></textarea><br><br>
-    <label for="pagesNumber">No. of Pages Time</label><br>
-    <input type="number" id="pagesNumber"><br><br>
-    <button onclick="addBook()">Add Book</button>
-    <h2>books</h2>
-    <div id="books">
-        <!-- books will be displayed here -->
+    <div class="mb-3">
+      <label for="bookName">Book Name</label>
+      <div class="input-group">
+        <input type="text" id="bookName" class="form-control" />
+      </div>
     </div>
+    <div class="mb-3">
+      <label for="authorName">Author Name</label>
+      <div class="input-group">
+        <textarea id="authorName" class="form-control"></textarea>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="bookDescription">Book Description</label>
+      <div class="input-group">
+        <textarea id="bookDescription" class="form-control"></textarea>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="pagesNumber">No. of Pages</label>
+      <div class="input-group">
+        <input type="number" id="pagesNumber" class="form-control" />
+      </div>
+    </div>
+
+    <button id="addBtn" onclick="addBook()" class="btn btn-primary">
+      Add Book
+    </button>
+    <button
+      id="deleteBtn"
+      onclick="deleteBook()"
+      class="btn btn-danger"
+      disabled
+    >
+      Delete Book
+    </button>
+    <div id="books" style="display: none">
+      <table id="booksTable" class="table">
+        <thead id="booksTable">
+          <tr>
+            <th>Book Number</th>
+            <th>Book Name</th>
+            <th>Author Name</th>
+            <th>Book Description</th>
+            <th>No. of Pages [page(s)]</th>
+          </tr>
+        </thead>
+        <tbody id="booksDetails">
+          <!-- books will be displayed here in table format-->
+        </tbody>
+      </table>
+    </div>
+
     <script src="./book_system.js"></script>
-</body>
+  </body>
 </html>
