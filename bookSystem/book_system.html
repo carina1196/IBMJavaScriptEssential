@@ -10,46 +10,50 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./book_system.css" />
   </head>
   <body>
-    <h1>Book Management System</h1>
-    <div class="mb-3">
+    <h1 class="mt-3 ml-3">Book Management System</h1>
+    <div class="mb-3 ml-3 mr-3">
       <label for="bookName">Book Name</label>
       <div class="input-group">
         <input type="text" id="bookName" class="form-control" />
       </div>
     </div>
-    <div class="mb-3">
+    <div class="mb-3 ml-3 mr-3">
       <label for="authorName">Author Name</label>
       <div class="input-group">
-        <textarea id="authorName" class="form-control"></textarea>
+        <input type="text" id="authorName" class="form-control" />
       </div>
     </div>
-    <div class="mb-3">
+    <div class="mb-3 ml-3 mr-3">
       <label for="bookDescription">Book Description</label>
       <div class="input-group">
         <textarea id="bookDescription" class="form-control"></textarea>
       </div>
     </div>
-    <div class="mb-3">
+    <div class="mb-3 ml-3 mr-3">
       <label for="pagesNumber">No. of Pages</label>
       <div class="input-group">
         <input type="number" id="pagesNumber" class="form-control" />
       </div>
     </div>
 
-    <button id="addBtn" onclick="addBook()" class="btn btn-primary">
-      Add Book
-    </button>
-    <button
-      id="deleteBtn"
-      onclick="deleteBook()"
-      class="btn btn-danger"
-      disabled
-    >
-      Delete Book
-    </button>
-    <div id="books" style="display: none">
+    <div class="mb-3 ml-3">
+      <button id="addBtn" onclick="addBook()" class="btn btn-primary">
+        Add Book
+      </button>
+      <button
+        id="deleteBtn"
+        onclick="deleteBook()"
+        class="btn btn-danger"
+        disabled
+      >
+        Delete Book
+      </button>
+    </div>
+
+    <div id="books" style="display: none" class="mt-3 mb-3 ml-3 mr-3">
       <table id="booksTable" class="table">
         <thead id="booksTable">
           <tr>
